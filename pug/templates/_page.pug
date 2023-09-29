@@ -1,0 +1,72 @@
+include ../components/_mixin.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/eruda/3.0.1/eruda.min.js", integrity="sha512-KkkY/3auRhaXDFzFMpwtZ+BrS8EBQ+GfiBxdJ9jGMi6Gg74/sYbq/IZpY593pkNjTmbeRfBwjpZo+7gcpH45Ww==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    script eruda.init();
+    link(href="out.css", rel="stylesheet")
+    title SF Solutions
+  body(class="bg-primary-100")
+    main(class="relative overflow-x-hidden")
+      //- Off-canvas navigation
+      header(class="xs:px-4 md:px-6")
+        nav#menu-nav.menu-nav.-translate-y-full.fixed.top-0.left-0.w-screen.transform.transition-transform.ease-in-out.duration-300.justify-around.items-center.text-primary-100.bg-color-6-800.font-heading(class="md:h-12 md:flex px-4 md:px-6 py-4")
+          a.no-underline.menu-button.text-primary-100(href="#")
+            i(class="fa fa-remove ml-1")
+          ul.list-none.p-0(class="block md:flex md:flex-row md:flex-grow space-y-4 md:space-x-2 md:space-y-0 py-4 md:px-6")
+            li.menu-item-link
+              a.text-primary-100(href="#") Home
+            li.menu-item-link
+              a.text-primary-100(href="#") About The Company
+          .container-fluid.w-full(class="md:w-auto py-4 md:py-0 md:text-align-right")
+            ul.list-none.p-0.flex.flex-row.flex-grow.space-x-8.text-info-950(class="md:px-6 text-t8 md:text-t5")
+              each text in ['whatsapp','phone','comment-o','envelope']
+                li.menu-item-link
+                  a(href="#")
+                    i(class="fa fa-"+ text) &nbsp;
+        // Navigation bar
+        nav.container-fluid.py-4
+          div.mx-auto
+            button.menu-button.text-color-6-800 &#9776;
+      section#hero.flex.flex-wrap
+        div(class="hidden w-[500px] h-[500px] rounded-full absolute md:inline-flex -z-10 -top-[10px] -right-[110px] bg-color-3-500")
+        div(class="w-full sm:block sm:w-3/5 order-2 sm:order-1 p-4")
+          block hero-image
+        article(class="sm:w-2/5 p-4 order-1 sm:order-2 md:flex items-center")
+          div.container-fluid.h-auto.inline-flex.flex-col(class="md:text-primary-100")
+            header.mb-10
+              +header(displayText)
+            +heading(subHeadingText,'font-bold mb-2')
+            p.mb-4
+              block hero-text
+      block content
+      // Footer section
+      footer.relative(class="xs:px-4 mt-5 xs:pt-4 md:pt-6 pb-8 md:px-12 md:flex sm:flex-wrap bg-color-6-500 text-primary-100")
+        .inline-block.absolute.top-0.right-0.mb-2.text-info-950.mr-2.text-t9 
+              a.no-underline(href="#")
+                i.fa.fa-arrow-up
+        div(class="hidden md:block md:w-1/3 p-4")
+          +header('Loren ipseum parata sierum.')
+        div(class="w-full md:w-1/3 md:p-4")
+          +heading('Contact Address','text-t4 font-extrabold')
+          address.mb-4
+            p 123 Street Name
+            p City, Country
+            p State
+            p 18880008888
+        div(class="w-full md:w-1/3 md:p-4")
+          +heading('Social','text-t4 font-extrabold')
+          ul.flex.space-x-5.text-info-950(class="text-t8 w-screen md:w-screen-auto lg:text-t5")
+            li.menu-item-link
+              a(href="#")
+                i(class="fa fa-facebook")
+            li.menu-item-link
+              a(href="#")
+                i(class="fa fa-twitter")
+            li.menu-item-link
+              a(href="#")
+                i(class="fa fa-instagram")       
+    script(src="script.js")
