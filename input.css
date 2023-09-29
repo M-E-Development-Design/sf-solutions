@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&family=Manrope:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .container-fluid {
+    @apply w-[100%];
+  }
+  section a:link, article a:link {
+    text-decoration: underline;
+    @apply underline text-secondary-500;
+  }
+
+  section a:active, article a:active {
+    text-decoration: underline;
+    @apply text-black underline;
+  }
+
+  a:hover {
+    @apply text-info-950;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply uppercase;
+  }
+
+  h3, h4, h5, h6, h7 {
+    @apply font-bold text-color-4-800;
+  }
+}
+
+@layer components {
+  .btn {
+    border-radius: theme('spacing.s14');
+    padding: theme('spacing.4') theme(spacing.6);
+    box-shadow: theme('boxShadow.md');
+    font-family: theme('fontFamily.heading');
+    text-transform: uppercase;
+    background-color: theme('colors.primary.DEFAULT');
+  }
+
+  .btn-info {
+    background-color: theme('colors.info.950');
+    color: theme('colors.primary.500');
+  }
+
+  .btn-primary {
+    background-color: theme('colors.primary.DEFAULT');
+    color: theme('colors.color-6.500');
+  }
+  
+  .btn-secondary {
+    background-color: theme('colors.secondary.500');
+    color: theme('colors.warning.150');
+  }
+
+  .btn-warning {
+    background-color: theme('colors.warning.DEFAULT');
+  }
+}
+
+@layer utilities {
+  .sub-title {
+    @apply text-t7 text-secondary-500 mb-4 font-bold uppercase
+  }
+
+  .display-title {
+    @apply text-t8 font-display italic
+  }
+
+  .quote-text {
+    @apply font-serif italic text-t3;
+  }
+
+  .quote-text sub {
+    bottom: -0.6em;
+  }
+
+  .quote-text sup {
+    top: -0.25em;
+  }
+
+  .quote-text sup, .quote-text sub {
+    @apply text-t6;
+  }
+
+  .styled-ul {
+    @apply p-0 my-2
+  }
+  .styled-ul li {
+    @apply flex items-center my-2 p-2 rounded-md space-x-2 odd:bg-secondary-500 odd:text-primary-500 even:text-info-950
+  }
+}
