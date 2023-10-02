@@ -14,7 +14,7 @@ mixin article(title,image,before,headingClasses,imageClasses,classes)
       +article-image(image,title,imageClasses)
 
 mixin article-image(image,title,classes)
-  img.mb-2(src= image, alt= title, class="md:w-full " + classes)
+  img.mb-2(src= image, alt= title, class=classes)
     
 mixin styled-ulist(entries)
   ul.styled-ul
