@@ -9,13 +9,13 @@
     @apply w-[100%];
   }
   
-  section a:link, p a:link, section a:active, p a:active {
+  a:not(.menu-item-link a), a:not(.menu-item-link a):active {
     text-decoration: underline;
-    @apply underline text-warning-100;
+    @apply underline text-secondary-500;
   }
 
-  a:hover, a:active {
-    @apply text-info-900;
+  a:hover {
+    @apply text-info-950;
   }
 
   h2, h3, h4, h5, h6 {
@@ -58,6 +58,10 @@
 
   .btn-warning {
     background-color: theme('colors.warning.DEFAULT');
+  }
+
+  .social-icons a {
+     @apply text-info-950;
   }
 }
 
