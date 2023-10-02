@@ -8,18 +8,14 @@
   .container-fluid {
     @apply w-[100%];
   }
-  section a:link, article a:link {
+  
+  section a:link, p a:link, section a:active, p a:active {
     text-decoration: underline;
-    @apply underline text-secondary-500;
+    @apply underline text-warning-100;
   }
 
-  section a:active, article a:active {
-    text-decoration: underline;
-    @apply text-black underline;
-  }
-
-  a:hover {
-    @apply text-info-950;
+  a:hover, a:active {
+    @apply text-info-900;
   }
 
   h2, h3, h4, h5, h6 {
@@ -27,7 +23,11 @@
   }
 
   h3, h4, h5, h6, h7 {
-    @apply font-bold text-color-4-800;
+    @apply font-bold text-color-5-800;
+  }
+
+  nav a:hover, footer a:hover {
+    @apply hover:text-warning-150;
   }
 }
 
@@ -43,12 +43,12 @@
 
   .btn-info {
     background-color: theme('colors.info.950');
-    color: theme('colors.primary.500');
+    color: theme('colors.black');
   }
 
   .btn-primary {
-    background-color: theme('colors.primary.DEFAULT');
-    color: theme('colors.color-6.500');
+    background-color: theme('colors.color-5.DEFAULT');
+    color: theme('colors.primary.500');
   }
   
   .btn-secondary {
@@ -63,15 +63,15 @@
 
 @layer utilities {
   .sub-title {
-    @apply text-t7 text-secondary-500 mb-4 font-bold uppercase
+    @apply text-t8 text-color-4-500 mb-4 font-light normal-case font-display;
   }
 
   .display-title {
-    @apply text-t8 font-display italic
+    @apply text-t9 font-display italic;
   }
 
   .quote-text {
-    @apply font-serif italic text-t3;
+    @apply font-display italic text-t5;
   }
 
   .quote-text sub {
@@ -90,6 +90,6 @@
     @apply p-0 my-2
   }
   .styled-ul li {
-    @apply flex items-center my-2 p-2 rounded-md space-x-2 odd:bg-secondary-500 odd:text-primary-500 even:text-info-950
+    @apply flex items-center mb-1 py-1 pl-2 rounded-md space-x-2 odd:bg-color-5-450 odd:bg-opacity-10 odd:text-primary-800 even:text-color-5-600;
   }
 }
