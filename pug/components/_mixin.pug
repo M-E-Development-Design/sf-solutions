@@ -4,19 +4,17 @@ mixin heading(text,classes)
 mixin header(text,classes)
   h1.display-title(class=classes)= text
 
-mixin article(title,image,before)
-  div.my-4
+mixin article(title,image,before,headingClasses,imageClasses,classes)
+  div.my-4(class= classes)
     if (image && before) 
-      +article-image(image,title)
-    h3.text-t5.mb-2= title
-    p.mb-2
-      block
+      +article-image(image,title,imageClasses)
+    h3.mb-2(class= headingClasses)= title
+    block
     if (image && !before)
-      +article-image(image,title)
+      +article-image(image,title,imageClasses)
 
 mixin article-image(image,title,classes)
-  p.mb-2
-    img(src= image, alt= title, class="w-full " + classes)
+  img.mb-2(src= image, alt= title, class="md:w-full " + classes)
     
 mixin styled-ulist(entries)
   ul.styled-ul
