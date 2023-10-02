@@ -9,36 +9,37 @@ block hero-text
   | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi eu dui congue
 block content
   section(class="xs:p-4 md:p-12")
-    +heading("Sub Title...","mb-12 sub-title")
+    +heading("Test Sample Subtitle...","mb-12 sub-title")
   +section-column("2-1","")
     article.w-full
       .container-fluid.p-4
-          +article("Sample Article #1","home-page-image2.jpg",1)
-            span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          +article("Sample Article #1","home-page-image2.jpg",1,"","sm:w-2/3")
+            p.mb-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           +heading('Another Subtitle',"mb-12 sub-title")
           p Below is a list of items. Lorem ipsum dolor sit amet, consectetur adipiscing elit:-
           +styled-ulist(['A list item','Another List Item','A long paragraph list item. Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Even list item'])
     //- Column #2      
     article.w-full      
       .container-fluid.p-4
-        +article("Sample Article #2","home-page-image5.jpg",0)
-          span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit. Ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        +article("Sample Article #2","home-page-image5.jpg",0,"","sm:w-2/3")
+          p.mb-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit. Ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         // Next article
-        +article("Another Sample Article","home-page-image3.jpg",1)
-          span Ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit.
+        +article("Another Sample Article","home-page-image3.jpg",1,"","sm:w-2/3")
+          p.mb-2 Ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit.
   +section-column("2-1","md:relative")
     .w-full.relative.p-4(class="order-2 md:order-1")
-      div(class="hidden w-[100%] h-[100%] rounded-t-full absolute md:inline-flex -z-50 -ml-[20%] bg-color-3-500 top-[12%]")
-      img(src='home-page-image4.png',title='Testimonials',class="w-2/3 mb-4")
-      +heading("Testimonials Heading","md:text-primary-100 mb-4 font-bold text-t7")
-      .container(class="md:w-3/4 md:text-primary-100 mb-4")
-        each para in ['Great work! Love them!','Always willing to help and with professionalizsim','This will be a paragraph text but try not to make it as long.']
-          +quoted-paragraph(para)
+      div(class="hidden w-[100%] h-[100%] rounded-t-full absolute md:inline-flex -z-50 -ml-[20%] bg-info-950 top-[12%]")
+      .container.z-index-0(class="md:p-8")
+        img(src='home-page-image4.png',title='Testimonials',class="hidden md:block w-2/3 mb-4")
+        +heading("Testimonials Heading","md:text-color-3-400 mb-4 font-bold text-t7")
+        .container(class="md:w-3/4 md:text-color-3-400")
+          each para in ['Great work! Love them!','Always willing to help and with professionalizsim','This will be a paragraph text but try not to make it as long.']
+            +quoted-paragraph(para)
     .w-full.order-1.p-4(class="md:order-2")
       .container-fluid
         +heading("Another Sub Heading...","sub-title")
         +article("Get a Quote",0,0)
-          span Ipsum dolor sit amet, 
+          p.mb-2 Ipsum dolor sit amet, 
             a(href="") a link in a paragraph 
             .
               consectetur adipiscing elit. Sit amet, dolor sit amet, consectetur adipiscing elit.
