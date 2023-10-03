@@ -9,10 +9,10 @@ block hero-text
   | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi eu dui congue
 block content
   section(class="xs:p-4 md:p-12")
-    +heading("Test Sample Subtitle...","mb-12 p-8 sub-title")
+    +heading("Test Sample Subtitle...","mb-12 md:p-8 sub-title")
   +section-column("2-1","")
     article.w-full
-      .container-fluid.p-8
+      .container-fluid.p-4(class="md:p-8")
           +article("Sample Article #1","home-page-image2.jpg",1,"","w-2/3 md:w-full")
             p.mb-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           +heading('Another Subtitle',"mb-12 sub-title")
@@ -20,24 +20,24 @@ block content
           +styled-ulist(['A list item','Another List Item','A long paragraph list item. Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Even list item'])
     //- Column #2      
     article.w-full      
-      .container-fluid.p-8
+      .container-fluid.p-4(class="md:p-8")
         +article("Sample Article #2","home-page-image5.jpg",0,"","w-2/3 md:w-full")
           p.mb-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit. Ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         // Next article
         +article("Another Sample Article","home-page-image3.jpg",1,"","w-2/3 md:w-full")
           p.mb-2 Ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit.
   +section-column("2-1","md:relative")
-    .w-full.relative.p-8(class="order-2 md:order-1")
+    .w-full.relative.p-4(class="md:p-8 order-2 md:order-1")
       div(class="hidden w-[100%] h-[100%] rounded-t-full absolute md:inline-flex -z-50 -ml-[20%] bg-info-950 top-[12%]")
-      .container.z-index-0(class="md:p-8")
+      .container.z-index-0(class="md:w-3/4")
         img(src='home-page-image4.png',title='Testimonials',class="hidden md:block w-2/3 mb-4")
         +heading("Testimonials Heading","md:text-color-3-400 mb-4 font-bold text-t7")
-        .container(class="md:w-3/4 md:text-color-3-400")
+        .container(class="md:text-color-3-400")
           each para in ['Great work! Love them!','Always willing to help and with professionalizsim','This will be a paragraph text but try not to make it as long.']
             +quoted-paragraph(para)
-    .w-full.order-1.p-8(class="md:order-2")
+    .w-full.order-1.p-4(class="md:p-8 md:order-2")
       .container-fluid
-        +heading("Another Sub Heading...","sub-title")
+        h2.my-4.capitalize.text-t6 Another sub heading
         +article("Get a Quote",0,0)
           p.mb-2 Ipsum dolor sit amet, 
             a(href="") a link in a paragraph 
