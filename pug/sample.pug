@@ -2,10 +2,11 @@ extends templates/_page.pug
 
 block content
   +section-column("1")
-    .container.p-4
+    .container.p-4(class="md:p-8")
       header
         +heading("A Heading Title","sub-title capitalize")
-      +article("Article Tite Heading","https://i.pravatar.cc/300",1,"","float-right w-1/3 ml-4 my-2","my-2")
+        h2.capitalize.text-t6 A sub heading
+      +article("Article Title Heading","https://i.pravatar.cc/300",1,"","float-right w-1/3 ml-4 my-2","my-2")
         p.my-2 Quisque et massa a dui faucibus vulputate. Praesent pharetra nunc in tellus blandit, eu bibendum nisi cursus. Donec luctus lacinia pulvinar. Ut tortor justo, fermentum sed lobortis vel, fermentum aliquet ligula. Phasellus iaculis nisi sed metus vehicula lobortis. Nulla blandit orci eu mauris rhoncus, ac blandit purus ultrices. Nullam pellentesque lectus vel pretium faucibus. Nunc viverra congue nisl, et placerat risus euismod vitae. Curabitur ut leo massa. Quisque molestie, tellus sit amet accumsan accumsan, tortor lacus bibendum erat, et accumsan dui dui ut neque. In sed pretium erat. Praesent ultricies bibendum metus vitae placerat. Ut ultricies mattis suscipit. Donec sed semper turpis. Sed lobortis est vitae magna pellentesque varius. Duis pulvinar tincidunt vulputate.
         p.my-2 Proin eu quam sapien. In blandit odio sed blandit tempor. Nullam sagittis, quam ac auctor mollis, dolor lorem
       
