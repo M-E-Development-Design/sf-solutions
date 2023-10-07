@@ -258,7 +258,7 @@ module.exports = {
         "s20": "24rem"
       },
       "fontFamily": {
-        "heading": "'Josefin Sans'",
+        "heading": '"Josefin Sans"',
         "body": "Manrope",
         "serif":"Lemonada",
         "display":'"Playfair Display"'
