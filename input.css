@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lemonada&family=Manrope:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Lemonada&family=Manrope:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,7 +36,7 @@
     border-radius: theme('spacing.s14');
     padding: theme('spacing.4') theme(spacing.6);
     box-shadow: theme('boxShadow.md');
-    font-family: theme('fontFamily.heading');
+    font-family: theme('fontFamily.body');
     text-transform: uppercase;
     background-color: theme('colors.primary.DEFAULT');
   }
