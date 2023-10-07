@@ -1,6 +1,6 @@
 extends templates/_page.pug
 
-block hero-im
+block hero-image
   // Article section with 2 columns
   - var displayText = "Another test intro title!";
   - var subHeadingText = "Another test sub heading title";
@@ -10,28 +10,28 @@ block hero-text
 block content
   section(class="p-4 md:p-8")
     +heading("Who are we?","mb-0 sub-title")
-    h2.my-8.-mt-2.capitalize.text-t6 Meet The Team Heading!
+    h2.my-8.-mt-2.capitalize.text-t6.font-bold Meet The Team Heading!
   +section-column("2")
     article.w-full.p-4.bg-warning
       .container-fluid
         +article('Ms. Test Person','about-page-image2.jpg',1,"quoted-text font-serif capitalize text-secondary-500 mb-0","rounded-full sm:shadow w-4/6 mb-6","md:ml-12 md:mr-4 pt-8")
-          h6.text-t3.-mt-2.mb-2.italic.text-secondary-500.font-normal.capitalize The Test Person Position Title
+          h6.text-t3.-mt-2.mb-2.italic.text-secondary-500.font-normal.capitalize.font-heading The Test Person Position Title
           p.my-4 Lipseum Lorem si constrseur bestri lem it alseir. Morbi gravida ultricies leo, vitae tincidunt sapien vulputate ut. Tae tincidunt sapien vulputate.
     article.w-full.p-4.bg-warning
       .container-fluid(class="rounded-tr-[15vw] text-primary-100 bg-color-5-450 p-4")
         +article('Ms. Another Test Person','about-page-image3.jpg',0,"quoted-text text-primary-100 font-serif capitalize mb-0","rounded-full sm-shadow w-4/6 my-8","md:ml-12 p-4 md:mr-4 py-8")
-          h6.text-t3.-mt-2.mb-2.italic.text-primary-100.font-normal.capitalize The Other Person Position Title
+          h6.text-t3.-mt-2.mb-2.italic.text-primary-100.font-normal.font-heading.capitalize The Other Person Position Title
           p.my-4 Lipseum Lorem si constrseur bestri lem it alseir. Morbi gravida ultricies leo, vitae tincidunt sapien vulputate ut. Tae tincidunt sapien vulputate
   header.p-4(class="md:p-8")
-    h2.capitalize.text-t6 Our Key Partners
+    h2.capitalize.text-t6.font-bold Our Key Partners
   +section-column("2","lg:columns-3 p-4 md:p-8")
     each person in [1,2,3,4,5,6]
       .article(class="md:pr-4")
         .container.flex(class="md:flex-row")
           img.rounded-full(src="https://i.pravatar.cc/300",class="w-1/4 border-2 border-secondary-500")
           .container(class="pl-4 flex flex-col")
-            h5.font-serif.capitalize.text-secondary-500.mt-4.mb-none Test Person
-            h8.-mt-1.capitalize.text-color-5-450.font-normal.text-t2 The Test Person Position
+            h5.font-serif.capitalize.text-secondary-500.mb-none Test Person
+            h8.-mt-1.capitalize.text-color-5-450.font-heading.text-t3 The Test Person Position
             p
               a(href="").uppercase.text-t1 Read More
         p.my-4.w-full Lipseum Lorem si constrseur bestri lem it alseir. Morbi gravida ultricies leo, vitae tincidunt sapien vulputate ut. Tae tincidunt sapien vulputate

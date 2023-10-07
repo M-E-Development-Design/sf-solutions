@@ -30,14 +30,14 @@ block content
     .w-full.relative.p-4(class="md:p-8 order-2 md:order-1")
       div(class="hidden w-[100%] h-[100%] rounded-t-full absolute md:inline-flex -z-50 -ml-[20%] bg-info-950 top-[12%]")
       .container.z-index-0(class="md:w-3/4")
-        img(src='home-page-image4.png',title='Testimonials',class="hidden md:block w-2/3 mb-4")
+        img(src='home-page-image2.png',title='Testimonials',class="hidden md:block w-[75%] mb-4")
         +heading("Testimonials Heading","md:text-color-3-400 mb-4 font-bold text-t7")
         .container(class="md:text-color-3-400")
           each para in ['Great work! Love them!','Always willing to help and with professionalizsim','This will be a paragraph text but try not to make it as long.']
             +quoted-paragraph(para)
     .w-full.order-1.p-4(class="md:p-8 md:order-2")
       .container-fluid
-        h2.my-4.capitalize.text-t6 Another sub heading
+        h2.my-4.capitalize.text-t6.font-bold Another sub heading
         +article("Get a Quote",0,0)
           p.mb-2 Ipsum dolor sit amet, 
             a(href="") a link in a paragraph 
