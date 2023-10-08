@@ -4,7 +4,7 @@ block hero-image
   // Article section with 2 columns
   - var displayText = "Welcome to this test website!";
   - var subHeadingText = "Paragraph heading text";
-  img(src="home-page-image1.png", alt="SF Solutions", class="w-full hidden md:block")
+  img(src="home-page-image1.png", alt="SF Solutions", class="lg:w-[90%] lg:float-right hidden md:block")
 block hero-text 
   | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi eu dui congue
 block content
@@ -12,33 +12,33 @@ block content
     +heading("Test Sample Subtitle...","mb-12 md:p-8 sub-title")
   +section-column("2-1","")
     article.w-full
-      .container-fluid.p-4(class="md:p-8")
-          +article("Sample Article #1","home-page-image2.jpg",1,"","w-2/3 md:w-full")
+      .container-fluid.p-4(class="md:p-8 lg:p-12")
+          +article("Sample Article #1","home-page-image2.jpg",1,"font-heading","w-2/3 md:w-full")
             p.mb-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           +heading('Another Subtitle',"mb-12 sub-title")
           p Below is a list of items. Lorem ipsum dolor sit amet, consectetur adipiscing elit:-
           +styled-ulist(['A list item','Another List Item','A long paragraph list item. Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Even list item'])
     //- Column #2      
     article.w-full      
-      .container-fluid.p-4(class="md:p-8")
-        +article("Sample Article #2","home-page-image5.jpg",0,"","w-2/3 md:w-full")
+      .container-fluid.p-4(class="md:p-8 lg:p-12")
+        +article("Sample Article #2","home-page-image5.jpg",0,"font-heading","w-2/3 md:w-full")
           p.mb-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit. Ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         // Next article
-        +article("Another Sample Article","home-page-image3.jpg",1,"","w-2/3 md:w-full")
+        +article("Another Sample Article","home-page-image3.jpg",1,"font-heading","w-2/3 md:w-full")
           p.mb-2 Ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit.
   +section-column("2-1","md:relative")
     .w-full.relative.p-4(class="md:p-8 order-2 md:order-1")
       div(class="hidden w-[100%] h-[100%] rounded-t-full absolute md:inline-flex -z-50 -ml-[20%] bg-info-950 top-[12%]")
       .container.z-index-0(class="md:w-3/4")
         img(src='home-page-image2.png',title='Testimonials',class="hidden md:block w-[75%] mb-4")
-        +heading("Testimonials Heading","md:text-color-3-400 mb-4 font-bold text-t7")
-        .container(class="md:text-color-3-400")
+        .container(class="md:text-color-3-400 lg:pl-12")
+          +heading("Testimonials Heading","md:text-color-3-400 mb-4 font-bold text-t7")
           each para in ['Great work! Love them!','Always willing to help and with professionalizsim','This will be a paragraph text but try not to make it as long.']
             +quoted-paragraph(para)
     .w-full.order-1.p-4(class="md:p-8 md:order-2")
       .container-fluid
-        h2.my-4.capitalize.text-t6.font-bold Another sub heading
-        +article("Get a Quote",0,0)
+        h2.my-4.capitalize.text-t6 Another sub heading
+        +article("Get a Quote",0,0,"font-heading")
           p.mb-2 Ipsum dolor sit amet, 
             a(href="") a link in a paragraph 
             .

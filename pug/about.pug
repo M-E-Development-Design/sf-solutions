@@ -4,7 +4,7 @@ block hero-image
   // Article section with 2 columns
   - var displayText = "Another test intro title!";
   - var subHeadingText = "Another test sub heading title";
-  img(src="about-page-image1.png", alt="SF Solutions", class="w-full hidden md:block")
+  img(src="about-page-image1.png", alt="SF Solutions", class="lg:w-[90%] lg:float-right hidden md:block")
 block hero-text 
   | Intro pragraph text it amet, consectetur adipiscing elit. Sed nec nisi eu dui congue
 block content
@@ -20,19 +20,21 @@ block content
     article.w-full.p-4.bg-warning
       .container-fluid(class="rounded-tr-[15vw] text-primary-100 bg-color-5-450 p-4")
         +article('Ms. Another Test Person','about-page-image3.jpg',0,"quoted-text text-primary-100 font-serif capitalize mb-0","rounded-full sm-shadow w-4/6 my-8","md:ml-12 p-4 md:mr-4 py-8")
-          h6.text-t3.-mt-2.mb-2.italic.text-primary-100.font-normal.font-heading.capitalize The Other Person Position Title
-          p.my-4 Lipseum Lorem si constrseur bestri lem it alseir. Morbi gravida ultricies leo, vitae tincidunt sapien vulputate ut. Tae tincidunt sapien vulputate
-  header.p-4(class="md:p-8")
-    h2.capitalize.text-t6.font-bold Our Key Partners
-  +section-column("2","lg:columns-3 p-4 md:p-8")
+          .container(class="lg:w-3/4")
+            h6.text-t3.-mt-2.mb-2.italic.text-primary-100.font-normal.font-heading.capitalize The Other Person Position Title
+            p.my-4 Lipseum Lorem si constrseur bestri lem it alseir. Morbi gravida ultricies leo, vitae tincidunt sapien vulputate ut. Tae tincidunt sapien vulputate
+  header.p-4(class="md:p-8 lg:p-12")
+    h2.text-color-4-450.text-t8.font-bold.font-heading Our Key Partners
+  +section-column("2","lg:columns-3 p-4 md:p-8 lg:p-12")
     each person in [1,2,3,4,5,6]
-      .article(class="md:pr-4")
-        .container.flex(class="md:flex-row")
-          img.rounded-full(src="https://i.pravatar.cc/300",class="w-1/4 border-2 border-secondary-500")
-          .container(class="pl-4 flex flex-col")
+      .article(class="md:pr-4 mb-4")
+        .container-fluid(class="md:flex md:flex-row")
+          figure
+            img.rounded-full(src="https://i.pravatar.cc/300",class="w-1/2 md:w-full border-2 border-secondary-500")
+          .container-fluid(class="pl-4 flex flex-col md:justify-center")
             h5.font-serif.capitalize.text-secondary-500.mb-none Test Person
             h8.-mt-1.capitalize.text-color-5-450.font-heading.text-t3 The Test Person Position
-            p
+            p.my-4.w-full Lipseum Lorem si constrseur bestri lem it alseir. Morbi gravida ultricies leo, vitae tincidunt sapien vulputate ut. Tae tincidunt sapien vulputate
+            p.mb-4
               a(href="").uppercase.text-t1 Read More
-        p.my-4.w-full Lipseum Lorem si constrseur bestri lem it alseir. Morbi gravida ultricies leo, vitae tincidunt sapien vulputate ut. Tae tincidunt sapien vulputate
-  
+            
