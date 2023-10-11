@@ -10,11 +10,11 @@ mixin header(text,classes)
 mixin article(title,image,before,headingClasses,imageClasses,classes)
   div.my-4.article(class="md:mb-12" + classes)
     if (image && before) 
-      +article-image(image,title,imageClasses+ " my-2 md:img-top")
+      +article-image(image,title,imageClasses+ " shadow-md my-2 md:img-top")
     h4.my-2.heading(class= headingClasses)= title
     block
     if (image && !before)
-      +article-image(image,title,imageClasses + " my-2 md:img-bottom")
+      +article-image(image,title,imageClasses + " shadow-md my-2 md:img-bottom")
 
 mixin article-image(image,title,classes)
   img(src= image, alt= title, class=classes)
