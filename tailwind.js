@@ -259,8 +259,8 @@ module.exports = {
       },
       "fontFamily": {
         "heading": '"Josefin Sans"',
-        "body": "Manrope",
-        "serif":"Lemonada",
+        "body": "Lemonada",
+        "subheading":"Manrope",
         "display":'"Playfair Display"'
       },
       "width": {
@@ -340,7 +340,7 @@ module.exports = {
         "l": "0px 8px 17px rgba(29, 25, 25, 0.23), 0px 0px 2px rgba(29, 25, 25, 0.2)",
         "xl": "0px 17px 35px rgba(29, 25, 25, 0.32), 0px 0px 2px rgba(29, 25, 25, 0.2)"
       },
-      "screens":{"xs":{"min":"320px"},"sm":"566px","md":"768px"},
+      "screens":{"xs":{"min":"320px"},"sm":"566px","md":"768px","lg":"1040px"},
       "gridTemplateColumns": {
         // Simple 16 column grid
         '2-1': '1.3fr .85fr'
