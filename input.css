@@ -1,10 +1,15 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Lemonada&family=Manrope:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;800&family=Lemonada&family=Manrope:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+
+  body, p {
+    @apply font-body text-t3;
+  }
+  
   .container-fluid {
     @apply w-[100%];
   }
@@ -18,12 +23,16 @@
     @apply text-info-950;
   }
 
-  h2, h3, h4, h5, h6 {
-    @apply uppercase;
+  h1 {
+    @apply font-display text-t9;
   }
 
-  h3, h4, h5, h6, h7 {
-    @apply font-bold text-color-5-800;
+h2 {
+    @apply font-subheading text-t7;
+}
+
+  h3, h4, h5, h6, h7, h8 {
+    @apply uppercase font-bold text-color-5-800;
   }
 
   nav a:hover, footer a:hover {
@@ -66,9 +75,14 @@
 }
 
 @layer utilities {
-  .sub-title {
-    @apply text-t8 text-color-4-500 mb-4 font-light normal-case font-display;
-  }
+ 
+.sub-title {
+    @apply text-t8 font-subheading font-bold capitalize text-color-4-500;
+} 
+
+    .heading {
+      @apply text-t5 font-heading font-bold text-color-4-600;
+    }
 
   .display-title {
     @apply text-t9 font-display italic;
@@ -77,6 +91,15 @@
   .quote-text {
     @apply font-display italic text-t5;
   }
+
+    .img-top {
+      @apply md:mb-16;
+    }
+
+  .img-bottom {
+    @apply md:my-16;
+  }
+  
 
   .quote-text sub {
     bottom: -0.6em;
@@ -93,6 +116,7 @@
   .styled-ul {
     @apply p-0 my-2
   }
+  
   .styled-ul li {
     @apply flex items-center mb-1 py-1 pl-2 rounded-md space-x-2 odd:bg-color-5-450 odd:bg-opacity-10 odd:text-primary-800 even:text-color-5-600;
   }
