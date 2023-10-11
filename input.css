@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;800&family=Lemonada&family=Manrope:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;800&family=Lemonada:wght@300;400&family=Manrope:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +7,7 @@
 @layer base {
 
   body, p {
-    @apply font-body text-t3;
+    @apply font-body text-t3 font-light text-color-6-900;
   }
   
   .container-fluid {
@@ -45,14 +45,18 @@ h2 {
     border-radius: theme('spacing.s14');
     padding: theme('spacing.4') theme(spacing.6);
     box-shadow: theme('boxShadow.md');
-    font-family: theme('fontFamily.body');
+    font-family: theme('fontFamily.subheading');
     text-transform: uppercase;
     background-color: theme('colors.primary.DEFAULT');
   }
 
+    .btn:hover {
+      @apply font-bold bg-blend-screen;
+    }
+
   .btn-info {
     background-color: theme('colors.info.950');
-    color: theme('colors.black');
+    color: theme('colors.primary.100');
   }
 
   .btn-primary {
