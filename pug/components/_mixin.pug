@@ -1,20 +1,23 @@
-mixin heading(text,classes)
-  h2(class=classes)= text
+mixin heading(text,classes,title)
+  if(title) 
+    h2(class= classes + " sub-title")= text
+  else 
+    h3(class=classes)= text
 
 mixin header(text,classes)
   h1.display-title(class=classes)= text
 
 mixin article(title,image,before,headingClasses,imageClasses,classes)
-  div.my-4(class= classes)
+  div.my-4.article(class="md:mb-12" + classes)
     if (image && before) 
-      +article-image(image,title,imageClasses)
-    h3.mb-2(class= headingClasses)= title
+      +article-image(image,title,imageClasses+ " my-2 md:img-top")
+    h4.my-2.heading(class= headingClasses)= title
     block
     if (image && !before)
-      +article-image(image,title,imageClasses)
+      +article-image(image,title,imageClasses + " my-2 md:img-bottom")
 
 mixin article-image(image,title,classes)
-  img.mb-2(src= image, alt= title, class=classes)
+  img(src= image, alt= title, class=classes)
     
 mixin styled-ulist(entries)
   ul.styled-ul
@@ -29,7 +32,7 @@ mixin quoted-paragraph(text)
     | <sup>&ldquo;</sup><span>#{text}</span><sub>&rdquo;</sub>
     | &nbsp; 
     br 
-    strong.text-right.font-heading.text-t3- A. Person
+    strong.text-right.text-t3- A. Person
 
 mixin section-column(cols,classes)
   div.grid-cols-1.grid(class="md:grid-cols-" +cols  +" " + classes)
