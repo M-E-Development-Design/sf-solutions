@@ -6,7 +6,7 @@ block hero-image
   - var subHeadingText = "Solutions";
   img(src="home-page-image1.png", alt="SF Solutions", class="lg:w-[90%] lg:float-right hidden md:block")
 block hero-text 
-  | We provide growth strategy consulting to clients nationwide as they pursue expansion opportunities and tackle growth challenges. We’ll help find your challenge, collaborate with you for a viable solution, and create a pathway to help you reach your goals. Solutions by SF is dedicated to understanding where you stand as an individual or an organization, and how to support you as you reach your next level of growth.
+  | We provide growth strategy consulting to clients nationwide as they pursue expansion opportunities and tackle growth challenges. We’ll help find your challenge, collaborate with you for a viable solution, and create a pathway to help you reach your goals. <strong>Solutions by SF</strong>is dedicated to understanding where you stand as an individual or an organization, and how to support you as you reach your next level of growth.
 block content
   section
     .container.p-4(class="lg:p-12 md:p-8")
@@ -15,38 +15,35 @@ block content
     article.w-full
       .container-fluid.p-4(class="md:p-8 lg:p-12")
         +article("Individual Services","home-page-image5.jpg",0,"","md:w-full")
-          p.my-2 Solutions by SF delivers comprehensive professional development coaching in the areas of career transitioning for those looking to change industries, attend a graduate program, or explore a different role within their current field.
+          p.my-2 <strong>Solutions by SF</strong> delivers comprehensive professional development coaching in the areas of career transitioning for those looking to change industries, attend a graduate program, or explore a different role within their current field.
         +article("Organizational Services","home-page-image3.jpg",0,"","md:w-full")
-          p.my-2 Solutions by SF Solutions by SF works to define and execute your organization’s growth strategy. With extensive expertise in capacity building via human capital, technology and operations processes, we will partner with you to develop a plan that enables your organization to maintain its vision and quality execution as your business expands.
+          p.my-2 <strong>Solutions by SF</strong> works to define and execute your organization’s growth strategy. With extensive expertise in capacity building via human capital, technology and operations processes, we will partner with you to develop a plan that enables your organization to maintain its vision and quality execution as your business expands.
     //- Column #2      
     article.w-full      
       .container-fluid.p-4(class="md:p-8 lg:p-12")
         // Next article
         +article("Executive Services","home-page-image2.jpg",1,"","w-full")
           p.my-2 We also provides executive and leadership coaching to professionals who are currently looking to strengthen their approach to strategy; developing their team of employees to reach higher levels of performance, increased job satisfaction, and personal growth; and successfully dealing with changes that arise in their organization, such as resolving difficult interactions or management of stakeholders and c-suite executives.
-        +heading('Another Subtitle',"mb-12 sub-title")
-        p Below is a list of items. Lorem ipsum dolor sit amet, consectetur adipiscing elite:-
-        +styled-ulist(['A list item','Another List Item','A long paragraph list item. Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Even list item'])
   +section-column("2","md:gap-x-44")
     .w-full.relative(class="order-2 md:order-1")
       div(class="bottom-0 top-0 right-0 left-0 w-[100%] md:w-[120%] h-[100%] rounded-t-full absolute md:inline-flex -z-50 md:-ml-[10%] lg:-ml-[20%] bg-info-950")
       div.z-index-0.px-4(class="md:px-8 lg:px-s12 pb-12 text-primary-100")
         img(src='home-page-image2.png',title='Testimonials',class="mx-auto w-[70%] mb-4")
         div.container.mx-auto(class="lg:w-[70%]")
-          h3(class="-mt-12 text-primary-100 capitalize mb-4 font-subheading text-t8") What Others Have said...
+          h3(class="-mt-12 text-primary-100 capitalize mb-4 font-subheading text-t7") What Others Have said...
           each para in ['Great work! Love them!','Always willing to help and with professionalizsim','This will be a paragraph text but try not to make it as long.']
             +quoted-paragraph(para)
     .w-full.order-1(class="order-1 md:order-2")
-      .container-fluid
-        h2.my-4.capitalize.text-t6 Another sub heading
-        +article("Get a Quote",0,0,"font-heading")
-          p.mb-2 Ipsum dolor sit amet, 
-          a(href="") a link in a paragraph 
-          .
-            consectetur adipiscing elit. Sit amet, dolor sit amet, consectetur adipiscing elit.
+      .container-fluid(class="p-4 md:p-8 lg:p-12")
+        +heading('What We Offer',"mb-12 sub-title")
+        p Below is a list of items. Lorem ipsum dolor sit amet, consectetur adipiscing elite:-
+        +styled-ulist(['A list item','Another List Item','A long paragraph list item. Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Even list item'])
+        .container.text-center.my-4
+          h2.my-12.capitalize.text-t6.sub-title Get A Quote
+          p.mb-2.text-left Ipsum dolor sit amet, 
+            a(href="") a link in a paragraph 
+            .
+              consectetur adipiscing elit. Sit amet, dolor sit amet, consectetur adipiscing elit.
           p.my-4
-            button#info-button.btn.btn-info Info button
-            button#primary-button.btn.btn-primary Primary button
-            button#secondary-button.btn.btn-secondary Secondary button
-            button#warning-button.btn.btn-warning Warning button
+            button#info-button.btn.btn-info Get A Quote
         
