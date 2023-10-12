@@ -6,8 +6,8 @@
 
 @layer base {
 
-  body, p {
-    @apply font-body text-t3 font-light text-color-6-900;
+  body {
+    @apply font-body text-t3 font-light text-color-5-900;
   }
   
   .container-fluid {
