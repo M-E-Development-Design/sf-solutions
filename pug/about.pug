@@ -2,27 +2,33 @@ extends templates/_page.pug
 
 block hero-image
   // Article section with 2 columns
-  - var displayText = "Another test intro title!";
-  - var subHeadingText = "Another test sub heading title";
+  - var displayText = "Who We are!";
+  - var subHeadingText = "About us";
   img(src="about-page-image1.png", alt="SF Solutions", class="lg:w-[90%] lg:float-right hidden md:block")
 block hero-text 
-  | Intro pragraph text it amet, consectetur adipiscing elit. Sed nec nisi eu dui congue
+  | <strong>Solutions by SF</strong> has an overall philosophy and mission to promote the exponential investment in the people we work with, empowering personal growth and professional progress. As such, we have Partners that we work together with in delivering excellent service towards achieving our clients' objectives.
 block content
-  section(class="p-4 md:p-8")
-    +heading("Who are we?","mb-0 sub-title")
-    h2.my-8.-mt-2.capitalize.text-t6.font-bold Meet The Team Heading!
-  +section-column("2")
-    article.w-full.p-4.bg-warning
-      .container-fluid
-        +article('Ms. Test Person','about-page-image2.jpg',1,"quoted-text font-serif text-t7 capitalize text-secondary-500 mb-0","rounded-full sm:shadow w-4/6 mb-6","md:ml-12 md:mr-4 pt-8")
-          h6.text-t5.-mt-2.mb-2.text-secondary-500.font-normal.capitalize.font-heading The Test Person Position Title
-          p.my-4 Lipseum Lorem si constrseur bestri lem it alseir. Morbi gravida ultricies leo, vitae tincidunt sapien vulputate ut. Tae tincidunt sapien vulputate.
-    article.w-full.p-4.bg-warning
-      .container-fluid(class="rounded-tr-[15vw] text-primary-100 bg-color-5-450 p-4")
-        +article('Ms. Another Test Person','about-page-image3.jpg',0,"quoted-text text-t7 text-primary-100 font-serif capitalize mb-0","rounded-full sm-shadow w-4/6 my-8","md:ml-12 p-4 md:mr-4 py-8")
-          .container(class="lg:w-3/4")
-            h6.text-t5.-mt-2.mb-2.text-primary-100.font-normal.font-heading.capitalize The Other Person Position Title
-            p.my-4 Lipseum Lorem si constrseur bestri lem it alseir. Morbi gravida ultricies leo, vitae tincidunt sapien vulputate ut. Tae tincidunt sapien vulputate
+  section
+    .container.p-4(class="lg:p-12 md:p-8")
+      +heading("Meet The Team...","mb-12",1)
+  +section-column("2","bg-color-4-500")
+    article.w-full(class="bg-primary-100")
+      .container(class="p-4 md:p-8 lg:p-12 md:pb-32 md:pr-32 text-primary-100 bg-color-4-500 rounded-br-[15vw]")
+        figure
+          img(src="about-page-image2.jpg",class="border-2 w-4/6 shadow-lg rounded-full my-4")
+        .container(class="md:mt-20")
+          h2(class="font-light font-subheading normal-case") Chief Growth Officer and Founder
+          h2(class="font-body italic font-bold") Shermica Farquhar
+          p.my-4(class="mb-20") She holds an MBA from The University of Chicago Booth School of Business with a focus on Entrepreneurship, Strategic Management, and Managerial & Organizational Behavior, and a B.S. in Business Administration with concentrations in International Business and Marketing from Georgetown University.
+    article.w-full(class="bg-primary-100 rounded-tl-[15vw]")
+      .container(class="p-4 md:p-8 lg:p-12 md:pl-32 md:pt-32 flex flex-col text-secondary-500")
+        figure(class="order-1 md:order-2")
+          img(src="about-page-image3.jpg",class="w-4/6 shadow-lg rounded-full my-4")
+        .container(class="order-2 md:order-1 md:mt-20")
+          h2(class="font-light font-subheading normal-case") Senior Consultant
+          h2(class="font-body italic font-bold") Jazelle Hunt
+          p.my-4(class="mb-20") Jazelle Hunt helps clients gather and mine their data for compelling narratives that build consensus, crystalize goals, and draw funders and supporters. With her support, Solutions by SF generates finished products that are effective, error-free, and engaging.
+      
   header.p-4(class="md:p-8 lg:p-12")
     h2.text-color-4-450.text-t8.font-bold.font-heading Our Key Partners
   +section-column("2","lg:columns-3 p-4 md:p-8 lg:p-12")
