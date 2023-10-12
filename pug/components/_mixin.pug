@@ -8,7 +8,7 @@ mixin header(text,classes)
   h1.display-title(class=classes)= text
 
 mixin article(title,image,before,headingClasses,imageClasses,classes)
-  div.my-4.article(class="md:mb-12" + classes)
+  div.my-4.article(class= classes + " md:mb-12")
     if (image && before) 
       +article-image(image,title,imageClasses+ " shadow-md my-2 md:img-top")
     h4.my-2.heading(class= headingClasses)= title
