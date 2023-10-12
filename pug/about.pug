@@ -11,26 +11,26 @@ block content
   section
     .container.p-4(class="lg:p-12 md:p-8")
       +heading("Meet The Team...","mb-12",1)
-  +section-column("2","bg-color-4-500")
-    article.w-full(class="bg-primary-100")
-      .container(class="p-4 md:p-8 lg:p-12 md:pb-32 md:pr-32 text-primary-100 bg-color-4-500 rounded-br-[15vw]")
+  section(class="flex flex-wrap")
+    article.w-full(class="md:w-1/2 lg:w-[55%]")
+      .container-fluid(class="w-full md:w-inherit p-4 md:p-8 lg:p-12 lg:pr-32 rounded-br-[15vw] text-secondary-500")
         figure
           img(src="about-page-image2.jpg",class="border-2 w-4/6 shadow-lg rounded-full my-4")
-        .container(class="md:mt-20")
+        div(class="md:mt-20")
           h2(class="font-light font-subheading normal-case") Chief Growth Officer and Founder
           h2(class="font-body italic font-bold") Shermica Farquhar
           p.my-4(class="mb-20") She holds an MBA from The University of Chicago Booth School of Business with a focus on Entrepreneurship, Strategic Management, and Managerial & Organizational Behavior, and a B.S. in Business Administration with concentrations in International Business and Marketing from Georgetown University.
-    article.w-full(class="bg-primary-100 rounded-tl-[15vw]")
-      .container(class="p-4 md:p-8 lg:p-12 md:pl-32 md:pt-32 flex flex-col text-secondary-500")
+    article.w-full.relative(class="md:w-1/2 lg:w-[45%]")
+      div(class="p-4 md:p-8 lg:p-24 flex flex-col bg-color-4-500 md:rounded-b-full text-primary-100")
         figure(class="order-1 md:order-2")
-          img(src="about-page-image3.jpg",class="w-4/6 shadow-lg rounded-full my-4")
-        .container(class="order-2 md:order-1 md:mt-20")
+          img(src="about-page-image3.jpg",class="w-4/6 mx-auto shadow-lg rounded-full my-4")
+        .container(class="order-2 mx-auto md:order-1 ")
           h2(class="font-light font-subheading normal-case") Senior Consultant
           h2(class="font-body italic font-bold") Jazelle Hunt
           p.my-4(class="mb-20") Jazelle Hunt helps clients gather and mine their data for compelling narratives that build consensus, crystalize goals, and draw funders and supporters. With her support, Solutions by SF generates finished products that are effective, error-free, and engaging.
       
   header.p-4(class="md:p-8 lg:p-12")
-    h2.text-color-4-450.text-t8.font-bold.font-heading Our Key Partners
+    +heading("Our Key Partners","normal-case",1) 
   +section-column("2","lg:columns-3 p-4 md:p-8 lg:p-12")
     each person in [1,2,3,4,5,6]
       .article(class="md:pr-4 mb-4")
