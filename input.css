@@ -82,7 +82,7 @@ h2 {
 @layer utilities {
  
 .sub-title {
-    @apply text-t8 font-subheading font-bold capitalize text-color-4-500;
+    @apply text-t8 lg:text-[2.5rem] font-subheading font-bold capitalize text-color-4-500;
 } 
 
     .heading {
@@ -90,7 +90,7 @@ h2 {
     }
 
   .display-title {
-    @apply text-t9 font-display italic;
+    @apply text-t10 lg:text-[3.5rem] font-display italic;
   }
 
   .quote-text {
