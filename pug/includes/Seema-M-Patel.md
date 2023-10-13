@@ -1,0 +1,1 @@
+Seema received her M.A. in Developmental Psychology from Columbia University’s Teachers College and her B.S. in Human Development and Family Studies from Cornell University’s College of Human Ecology.

@@ -1,0 +1,1 @@
+Ronald earned his Bachelor’s of Science in Computer Science from the University of Hertfordshire, UK. He has also acquired several professional certificates in Information Systems Auditing (CISA), Governance in Enterprise Information Technology (CGEIT), Risk Management of Information Systems (CRISC), and Cybersecurity Fundamentals.

@@ -1,0 +1,1 @@
+Kofi earned his MBA from Carnegie Mellon University’s Tepper School of Business and a Bachelor’s of Science in Packaging Science from Rochester Institute of Technology (RIT).

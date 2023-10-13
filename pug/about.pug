@@ -30,16 +30,16 @@ block content
           p.my-4(class="mb-20") Jazelle Hunt helps clients gather and mine their data for compelling narratives that build consensus, crystalize goals, and draw funders and supporters. With her support, Solutions by SF generates finished products that are effective, error-free, and engaging
   header.p-4(class="md:p-8 lg:p-12")
     +heading("Our Key Partners","normal-case",1) 
-  +section-column("2","md:gap-y-4 lg:columns-3 p-4 md:p-8 lg:p-12")
+  +section-column("2","md:gap-y-4 lg:gap-x-12 lg:columns-3 p-4 md:p-8 lg:p-12")
     each person in data.staff
       - var file = person.name.replaceAll(" ","-")
       .article(class="text-center md:text-left md:pr-4 mb-4")
-        .container-fluid(class="md:container md:flex md:flex-row")
-          figure(class="text-center md:w-1/3 lg:w-2/5 md:text-left")
+        .container-fluid(class="md:container md:flex md:flex-row flex-wrap")
+          figure(class="text-center md:w-1/3 lg:w-2/5 flex-1 md:flex-none md:text-left")
             img.rounded-full(src= file+".jpg",class="mx-auto mb-4 md:mx-1 w-1/2 md:w-full border-2 border-secondary-500")
-          .container-fluid(class="md:pl-4 lg:p-12 md:container flex flex-1 flex-col lg:flex-auto md:justify-center")
-            h3(class="font-body italic font-bold lg:text-lg")= person.name
+          .container-fluid(class="md:pl-4 lg:p-12 md:container flex flex-1 flex-col md:justify-center")
+            h2(class="font-body italic font-bold text-secondary-500 lg:text-2xl")= person.name
             h3(class="font-light font-subheading normal-case lg:text-md")= person.position
             p.mb-4
               a(href="").uppercase.text-t1 Read More
-            p.my-4.w-full= requireF(file)
+          p.my-4.w-full= requireF(file)

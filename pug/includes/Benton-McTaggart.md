@@ -1,0 +1,1 @@
+Benton McTaggart is a Certified Professional Coach, specializing in Leadership and Executive Coaching through the Institute for Professional Excellence in Coaching – one of the top coach training institutes in the world. He helps MBAs and BIPOC professionals stand out in the workplace, so that they can be promoted into six-figure roles.

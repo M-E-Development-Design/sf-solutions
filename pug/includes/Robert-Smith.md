@@ -1,0 +1,1 @@
+Robert E. Smith, Ph.D., is a solutions-focused human resources and talent expert with over 12 years of experience designing and leading workforce transformations.
