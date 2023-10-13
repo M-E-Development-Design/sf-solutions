@@ -1,0 +1,30 @@
+{
+  requireF: function (file) {
+    var text =fs.readFileSync(path.resolve('node_modules')+'/../pug/includes/'+file+'.md');
+    return text;
+  },
+  data: {
+    "staff": [
+      {
+        name: "Robert Smith",
+        position: "HR Talent Strategist"
+      },
+      {
+        name: "Kofi Ampadu",
+        position: "Lead Investment Advisor"
+      },
+      {
+        name: "Ronald McLean",
+        position: "IT Risk Management"
+      },
+      {
+        name: "Seema M Patel",
+        position: "Independent Consultant"
+      },
+      {
+        name: "Benton McTaggart",
+        position: "Certified Professional Coach"
+      }
+    ]
+  }
+}

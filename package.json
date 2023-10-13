@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":  "npx pug3 --watch -o pages pug & tailwindcss -i ./input.css -o ./public/out.css --watch & node index.js"
+    "start":  "npx pug3 -O ./data.json --watch -o pages pug & tailwindcss -i ./input.css -o ./public/out.css --watch & node index.js"
   },
   "keywords": [],
   "author": "",
