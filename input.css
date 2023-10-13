@@ -74,6 +74,10 @@ h2 {
     background-color: theme('colors.warning.DEFAULT');
   }
 
+    .btn-success {
+      background-color: theme('colors.success.DEFAULT');
+    }
+
   .social-icons a {
      @apply text-info-950;
   }
@@ -90,7 +94,7 @@ h2 {
     }
 
   .display-title {
-    @apply text-t10 lg:text-[3.5rem] font-display italic;
+    @apply text-t9 lg:text-[3.5rem] font-display italic;
   }
 
   .quote-text {
