@@ -5,12 +5,10 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
-    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/eruda/3.0.1/eruda.min.js", integrity="sha512-KkkY/3auRhaXDFzFMpwtZ+BrS8EBQ+GfiBxdJ9jGMi6Gg74/sYbq/IZpY593pkNjTmbeRfBwjpZo+7gcpH45Ww==", crossorigin="anonymous", referrerpolicy="no-referrer")
-    //- script eruda.init();
     link(href="out.css", rel="stylesheet")
     title SF Solutions
   body(class="bg-primary-100")
-    main(class="relative overflow-x-hidden")
+    main(class="relative overflow-x-hidden min-h-full")
       //- Off-canvas navigation
       header(class="xs:px-4 md:px-6")
         nav#menu-nav.menu-nav.-translate-y-full.fixed.top-0.left-0.w-screen.transform.transition-transform.ease-in-out.duration-300.justify-around.items-center.text-primary-100.bg-color-5-800(class="md:h-12 md:flex px-4 md:px-6 py-4")
@@ -35,7 +33,7 @@ html(lang="en")
             button.menu-button.text-color-6-800 &#9776;
       
       section#hero.flex.flex-wrap
-        div(class="w-[75vw] h-[75vw] rounded-full absolute md:inline-flex -z-10 -top-[10px] -right-[110px] bg-secondary-500")
+        div(class="w-[75vw] h-[75vw] rounded-full absolute md:inline-flex -z-10 -top-[10px] -right-[110px] lg:-right-[375px] bg-secondary-500")
         div(class="w-full sm:block sm:w-3/5 order-2 sm:order-1 p-4")
           block hero-image
         article(class="sm:w-2/5 p-4 order-1 sm:order-2 md:flex items-center")
